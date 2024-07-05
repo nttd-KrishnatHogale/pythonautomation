@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/nttd-KrishnatHogale/pythonautomation.git'
+                git branch: 'main', url: 'https://github.com/nttd-KrishnatHogale/pythonautomation'
             }
         }
         stage('Setup Python Environment') {
