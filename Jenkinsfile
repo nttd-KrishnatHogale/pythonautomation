@@ -1,10 +1,7 @@
 pipeline {
     agent any
 
-    
-
     stages {
-
         stage('INstall python'){
             steps {
                 sh  '''
@@ -14,13 +11,8 @@ pipeline {
                         sudo apt install -y python3 python3-pip
                     fi
                     '''
-                    
-                
-            }
-
+                    }
         }
-
-
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/nttd-KrishnatHogale/pythonautomation'
