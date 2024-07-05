@@ -13,17 +13,20 @@ pipeline {
         }
         stage('Setup Python Environment') {
             steps {
-                sh '''
-                    python3 -m venv $VENV
-                    source $VENV/bin/activate
-                    pip install selenium
+                sh
+                    // python3 -m venv $VENV
+                    // source $VENV/bin/activate
+                    '''
+                     pip install selenium
                 '''
             }
         }
         stage('Run Tests') {
             steps {
-                sh '''
-                    source $VENV/bin/activate
+                sh 
+                    // source $VENV/bin/activate
+            
+                   '''
                     python secondTestCase.py
                 '''
             }
