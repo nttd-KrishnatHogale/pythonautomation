@@ -1,11 +1,27 @@
 pipeline {
     agent any
 
-    environment {
-        VENV = "venv"
-    }
+    
 
     stages {
+
+        stage('INstall python'){
+            steps{
+                script {
+                    def pyinstall = '''
+                    if ! command -v python3 > & /dev/null
+                    then
+                        sudo apt update
+                        sudo apt install -y python3 python3-pip
+                    fi
+                    '''
+                    sh pyinstall
+                }
+            }
+
+        }
+
+
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/nttd-KrishnatHogale/pythonautomation'
