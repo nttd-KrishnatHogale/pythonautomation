@@ -2,9 +2,11 @@
 from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
+from webdriver_manger.chrome import ChromeDriverManager
 
 
-driver = webdriver.Chrome()
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.maximize_window()
 
 driver.get("https://admin-demo.nopcommerce.com/login")
