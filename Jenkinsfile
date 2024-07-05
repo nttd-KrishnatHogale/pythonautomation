@@ -7,16 +7,17 @@ pipeline {
 
         stage('INstall python'){
             steps{
-                script {
-                    def pyinstall = '''
+                
+                    sh 
+                        '''
                     if ! command -v python3 > & /dev/null
                     then
                         sudo apt update
                         sudo apt install -y python3 python3-pip
                     fi
                     '''
-                    sh pyinstall
-                }
+                    
+                
             }
 
         }
