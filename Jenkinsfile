@@ -6,9 +6,8 @@ pipeline {
     stages {
 
         stage('INstall python'){
-            steps{
-                
-                    sh 
+            steps {
+                sh 
                         '''
                     if ! command -v python3 > & /dev/null
                     then
