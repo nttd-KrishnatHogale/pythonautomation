@@ -7,8 +7,7 @@ pipeline {
 
         stage('INstall python'){
             steps {
-                sh 
-                        '''
+                sh  '''
                     if ! command -v python3 > & /dev/null
                     then
                         sudo apt update
