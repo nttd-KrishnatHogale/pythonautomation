@@ -17,7 +17,7 @@ pipeline {
                 sh  '''
                      python3 -m venv $VENV
                      . $VENV/bin/activate
-                     pip install selenium webdriver-manager
+                     pip install selenium webdriver_manager
                     '''
             }
         }
