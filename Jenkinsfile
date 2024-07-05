@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh  '''
                      python3 -m venv $VENV
-                     source $VENV/bin/activate
+                     . $VENV/bin/activate
                      pip install selenium
                     '''
             }
@@ -24,7 +24,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                    source $VENV/bin/activate
+                    . $VENV/bin/activate
                     python secondTestCase.py
                 '''
             }
