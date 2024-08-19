@@ -280,7 +280,7 @@ class TestAssignmentOne:
         # assert checkouttext.text.__eq__(expectedchecouttext)
         selectcountry=Select(self.driver.find_element(By.XPATH,"//select[@id='BillingNewAddress_CountryId']"))
         print("this is selectvoutyr",selectcountry.select_by_visible_text("India"))
-        # lastoption =selectcountry.options.__eq__("India")
+        lastoption =selectcountry.options.__eq__("India")
         print("lastoption", lastoption)
         # selectcountry.select_by_visible_text("India")
         selectcountry.select_by_value("133")
